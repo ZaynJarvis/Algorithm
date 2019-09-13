@@ -1,0 +1,28 @@
+ul {
+  padding: 0;
+  border-radius: 10px;
+  width: 40vw;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  border: 1px #f3f3f3 solid;
+  margin:0;
+  padding: 10px 15px;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: #f3f3f3;
+  }
+}
+
+a {
+  color: #2f2f2f;
+  text-decoration: none;
+}
+
+.selected {
+  background: #f9f9f9;
+}

@@ -1,0 +1,11 @@
+<app-problem-list></app-problem-list>
+<app-problem></app-problem>
+
+<div
+  [ngClass]="{ button: true, expand: create }"
+  clickOutside
+  (clickOutside)="close()"
+  (click)="onClick()"
+>
+  <app-add-problem class="floating"></app-add-problem>
+</div>

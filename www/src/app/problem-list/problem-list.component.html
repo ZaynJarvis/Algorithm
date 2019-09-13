@@ -1,0 +1,10 @@
+<ul>
+  <li
+    *ngFor="let p of problems; index as i"
+    [ngClass]="{ inner: true, selected: selected === i }"
+    (click)="onClick(p, i)"
+  >
+    <a [href]="p.url">{{ p.title }}</a>
+    <span>{{ p.time | date: 'shortDate' }}</span>
+  </li>
+</ul>
