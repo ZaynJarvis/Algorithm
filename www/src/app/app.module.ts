@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClickOutsideDirective } from './clickOutside.directive';
-import { environment } from '../../../algorithm.T/src/environments/environment';
+import { environment } from '../../src/environments/environment';
 import { ProblemListComponent } from './problem-list/problem-list.component';
 import { AddProblemComponent } from './add-problem/add-problem.component';
 import { ProblemComponent } from './problem/problem.component';
