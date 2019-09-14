@@ -51,8 +51,7 @@
       <button mat-raised-button color="primary" type="submit" [disabled]="!problemForm.form.valid">
         Submit
       </button>
-
-      <button mat-raised-button>Clear</button>
     </form>
+    <button mat-button color="error" (click)="onClear()">Clear</button>
   </div>
 </div>

@@ -1,5 +1,6 @@
 export class Problem {
   constructor(
+    public id: string,
     public title: string = '',
     public description: string = '',
     public url: string = '',
@@ -9,6 +10,7 @@ export class Problem {
 
   parse() {
     return {
+      id: this.id,
       title: this.title,
       description: this.description,
       url: this.url,

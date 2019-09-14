@@ -1,2 +1,10 @@
 <a target="_blank" [href]="problem?.url">{{ problem?.title }}</a>
 <p>{{ problem?.description }}</p>
+
+<button mat-button color="error" (click)="onDelete()" *ngIf="problem?.time">
+  Delete
+</button>
+
+<div *ngIf="!problem?.time">
+  ...
+</div>
