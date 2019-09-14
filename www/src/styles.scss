@@ -4,3 +4,60 @@
 body {
   font-family: 'Libre Franklin', sans-serif;
 }
+
+.full {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-wrapper {
+  background: #84baea;
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+  box-shadow: 4px 5px 24px #84baea99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // animation: wrapper-animation 3s infinite ease-in-out;
+}
+
+.loader {
+  animation: loading-animation 1s infinite ease-in-out;
+  border: 4px #fff solid;
+  border-radius: 10px;
+  height: 22px;
+  margin: 0 4px;
+  width: 0px;
+}
+@for $i from 1 through 10 {
+  .loader:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.14}s;
+  }
+}
+
+@keyframes loading-animation {
+  0%,
+  10% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.4);
+  }
+}
+
+@keyframes wrapper-animation {
+  0%,
+  10% {
+    transform: scale(1.0);
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+}
+
