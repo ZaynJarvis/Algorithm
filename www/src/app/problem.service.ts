@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ProblemService {
   problem = new BehaviorSubject({});
+
   constructor() {}
 
   getProblem() {
@@ -14,5 +15,8 @@ export class ProblemService {
 
   setProblem(p: Problem) {
     return this.problem.next(p);
+  }
+  unsetProblem() {
+    return this.problem.next(null);
   }
 }

@@ -9,22 +9,24 @@ import { ProblemService } from '../problem.service';
 })
 export class ProblemListComponent implements OnInit {
   problems: Problem[];
-  selected: number;
+  selected = -1;
   constructor(private db: AngularFirestore, private problemService: ProblemService) {}
 
   ngOnInit() {
     const problemService = this.db.collection('problem').valueChanges();
     problemService.subscribe((p: Problem[]) => {
+      p.sort((a, b) => b.time - a.time);
       this.problems = p;
-      if (this.problems.length > 0) {
-        this.problemService.setProblem(this.problems[0]);
-      }
-      this.selected = 0;
     });
   }
 
   onClick(p: Problem, i: number) {
     this.problemService.setProblem(p);
     this.selected = i;
+  }
+
+  onCreate() {
+    this.problemService.unsetProblem();
+    this.selected = -1;
   }
 }

@@ -1,57 +1,62 @@
 <div class="container">
-  <div>
-    <form (ngSubmit)="onSubmit()" #problemForm="ngForm">
-      <div class="form-group">
-        <mat-form-field appearance="outline">
-          <input
-            matInput
-            required
-            [(ngModel)]="model.title"
-            placeholder="Problem"
-            name="problem"
-            autocomplete="off"
-          />
-        </mat-form-field>
-      </div>
-      <div class="form-group">
-        <mat-form-field appearance="outline">
-          <input
-            matInput
-            required
-            [(ngModel)]="model.url"
-            placeholder="Url"
-            name="url"
-            autocomplete="off"
-          />
-        </mat-form-field>
-      </div>
+  <form (ngSubmit)="onSubmit()" #problemForm="ngForm">
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          required
+          [(ngModel)]="model.title"
+          placeholder="Problem"
+          name="problem"
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          required
+          [(ngModel)]="model.url"
+          placeholder="Url"
+          name="url"
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </div>
 
-      <div class="form-group">
-        <mat-form-field appearance="outline">
-          <textarea
-            matInput
-            required
-            rows="5"
-            [(ngModel)]="model.description"
-            placeholder="Description"
-            name="description"
-          ></textarea>
-        </mat-form-field>
-      </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <textarea
+          matInput
+          required
+          rows="5"
+          [(ngModel)]="model.description"
+          placeholder="Description"
+          name="description"
+        ></textarea>
+      </mat-form-field>
+    </div>
 
-      <div class="form-group">
-        <mat-form-field appearance="outline">
-          <mat-select [(value)]="model.difficulty" placeholder="difficulty">
-            <mat-option *ngFor="let d of difficulties; index as i" [value]="i">
-              {{ d }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <button mat-raised-button color="primary" type="submit" [disabled]="!problemForm.form.valid">
-        Submit
-      </button>
-    </form>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-select [(value)]="model.difficulty" placeholder="difficulty">
+          <mat-option *ngFor="let d of difficulties; index as i" [value]="i">
+            {{ d }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+  <div class="button-group">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onSubmit()"
+      [disabled]="!problemForm.form.valid"
+    >
+      Submit
+    </button>
     <button mat-button color="error" (click)="onClear()">Clear</button>
   </div>
 </div>

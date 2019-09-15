@@ -1,3 +1,17 @@
+.container {
+    margin: 0;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
 button {
-  margin: 10px 15px;
+    margin: 10px 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
 }

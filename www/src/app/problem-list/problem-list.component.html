@@ -1,10 +1,13 @@
 <ul>
+  <li [ngClass]="{ inner: true, selected: selected === -1 }" (click)="onCreate()">
+    <span style="text-align: center; width: 100%;">Algorithm</span>
+  </li>
   <li
     *ngFor="let p of problems; index as i"
     [ngClass]="{ inner: true, selected: selected === i }"
     (click)="onClick(p, i)"
   >
-    <a [href]="p.url">{{ p.title }}</a>
+    <span>{{ p.title }}</span>
     <span>{{ p.time | date: 'shortDate' }}</span>
   </li>
 </ul>

@@ -1,49 +1,51 @@
 :host {
-  display: flex;
+    display: flex;
 }
 
-app-problem-list, app-problem {
-  max-height: 100vh;
-  width: 45%;
-  padding: 0 25px;
-  overflow-y: scroll;
-  margin-top: 3rem;
-}
+app-problem-list,
 app-problem {
-  width: 55%;
-  padding: 25px;
+    margin-top: 3rem;
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 0 25px;
+    width: 45%;
 }
 
-.button {
-  height: 50px;
-  width: 50px;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  box-shadow: 0px 0px 3px rgba(56, 76, 167, 0.2);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 100px;
-  background: rgb(56, 76, 167);
-  transition: 0.5s;
-  overflow-y: scroll;
-
-  app-add-problem {
-    transform: scale(0);
-    transition: 0.5s;
-  }
+app-problem {
+    padding: 25px;
+    width: 55%;
 }
 
-.expand {
-  background: #fff;
-  border: 2px rgb(56, 76, 167) solid;
-  border-radius: 8px;
-  height: 600px;
-  width: 300px;
-  app-add-problem {
-    transform: scale(1);
-  }
-}
+// .button {
+//   height: 50px;
+//   width: 50px;
+//   position: fixed;
+//   bottom: 40px;
+//   right: 40px;
+//   box-shadow: 0px 0px 3px rgba(56, 76, 167, 0.2);
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   border-radius: 100px;
+//   background: rgb(56, 76, 167);
+//   transition: 0.5s;
+//   overflow-y: scroll;
+
+//   app-add-problem {
+//     transform: scale(0);
+//     transition: 0.5s;
+//   }
+// }
+
+// .expand {
+//   background: #fff;
+//   border: 2px rgb(56, 76, 167) solid;
+//   border-radius: 8px;
+//   height: 600px;
+//   width: 300px;
+//   app-add-problem {
+//     transform: scale(1);
+//   }
+// }
