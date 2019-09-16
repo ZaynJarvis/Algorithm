@@ -47,16 +47,17 @@
         </mat-select>
       </mat-form-field>
     </div>
+    <div class="button-group">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onSubmit()"
+        type="reset"
+        [disabled]="!problemForm.form.valid"
+      >
+        Submit
+      </button>
+      <button mat-button color="error" type="reset" (click)="onClear()">Clear</button>
+    </div>
   </form>
-  <div class="button-group">
-    <button
-      mat-raised-button
-      color="primary"
-      (click)="onSubmit()"
-      [disabled]="!problemForm.form.valid"
-    >
-      Submit
-    </button>
-    <button mat-button color="error" (click)="onClear()">Clear</button>
-  </div>
 </div>
