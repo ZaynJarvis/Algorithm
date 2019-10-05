@@ -26,6 +26,7 @@ export class AddProblemComponent implements OnInit {
       .collection('problem')
       .doc(this.model.id)
       .set(this.model.parse(), { merge: true });
+    this.modelInit();
   }
 
   onClear() {
